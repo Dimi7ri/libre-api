@@ -1,9 +1,11 @@
+import { addAnything } from '../controllers/coreController';
+
 const routes = app => {
   app
     .route('/libre')
     .get((req, res) => res.send('You used GET in core'))
 
-    .post((req, res) => res.send('You used POST in core'));
+    .post(addAnything);
 
   app
     .route('/libre/:dataId')
