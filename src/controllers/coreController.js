@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-import { anythingSchema } from '../models/core';
+import anythingSchema from '../models/core';
 
-const Anything = mongoose.model('anything', anythingSchema);
+var Anything = mongoose.model('anything', anythingSchema);
 
 export const addAnything = (req, res) => {
   let data = new Anything(req.body);
